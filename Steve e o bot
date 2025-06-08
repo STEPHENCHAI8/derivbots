@@ -1,0 +1,44 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Deriv Even/Odd SpeedBot</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      background: #f4f4f4;
+    }
+    input, select, button {
+      display: block;
+      margin-bottom: 10px;
+      padding: 10px;
+      font-size: 16px;
+      width: 300px;
+    }
+    #log {
+      background: #000;
+      color: #0f0;
+      padding: 10px;
+      font-family: monospace;
+      height: 300px;
+      overflow-y: scroll;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Deriv Even/Odd SpeedBot</h2><label for="appId">Deriv App ID:</label> <input id="appId" type="text" placeholder="Enter your Deriv App ID">
+
+<label for="symbol">Market Symbol:</label> <select id="symbol"> <option value="R_100">Volatility 100 Index</option> <option value="R_75">Volatility 75 Index</option> <option value="R_50">Volatility 50 Index</option> </select>
+
+<label for="consec">Consecutive Count:</label> <input id="consec" type="number" value="3">
+
+<button id="startBtn">Start Bot</button> <button id="stopBtn" disabled>Stop Bot</button>
+
+  <div id="log"></div>  <script>
+    const startBtn = document.getElementById('startBtn');
+    const stopBtn = document.getElementById('stopBtn');
+    const logEl = document.getElementById('log');
+    const appIdEl = document.getElementById('appId');
+    const symbolEl = document.getElementById('symbol');
+    const consecEl = document.getElementById('con
